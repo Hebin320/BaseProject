@@ -61,8 +61,6 @@
 
 * ViewpagerTool —— Viewpager的工具类，切换Viewpager，切换RadioButton
 
-## minterface接口类 
-
 ## minterface接口类
 
 *  base包内的接口为实现MVP的基础回调接口
