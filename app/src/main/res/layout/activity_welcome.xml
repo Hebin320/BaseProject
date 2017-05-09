@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_father"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hebin.ui.activity.guide.WelcomeActivity"
+    >
+
+    <com.hebin.custom.view.tablayout.MyTabLayout
+        android:id="@+id/tab_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_50"
+        android:background="@color/white"
+        app:drawable_heigth="@dimen/dp_18"
+        app:drawable_padding="@dimen/dp_5"
+        app:drawable_width="@dimen/dp_22"
+        app:itemBackground="@color/white"
+        app:itemSelectBackground="@color/colorPrimary"
+        app:tab_drawable="drawable_top"
+        app:textColor="@color/black"
+        app:textSelectColor="#F00"
+        app:textSize="14"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_250"/>
+
+
+</LinearLayout>
+

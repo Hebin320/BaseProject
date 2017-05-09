@@ -1,0 +1,88 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:background="@color/colorPrimary"
+            android:elevation="@dimen/dp_10"
+            android:orientation="vertical"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:contentInsetStart="@dimen/dp_0"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_back"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/recycler_bg_colorprimary"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_back_white"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:maxWidth="@dimen/dp_200"
+                        android:text="预览"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_20"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_delete"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_preview_delete"
+                        />
+
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/show_img_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/showimg_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="1/1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"/>
+</RelativeLayout>

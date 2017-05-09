@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_scanner_bg">
+
+    <SurfaceView
+        android:id="@+id/mo_scanner_preview_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/ic_scanner_bg" />
+
+    <com.hebin.zxing.view.ViewfinderView
+        android:id="@+id/mo_scanner_viewfinder_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/ic_scanner_bg" />
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:contentInsetStart="0dp"
+        android:background="@color/colorPrimary"
+        >
+
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:id="@+id/mo_scanner_photo"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_scanner_album"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/app_name"
+                />
+
+            <ImageView
+                android:id="@+id/mo_scanner_light"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_scanner_light_light"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerInside"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="70dp"
+        android:gravity="center_horizontal"
+        android:text="二维码 、条形码扫描"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp" />
+</FrameLayout>

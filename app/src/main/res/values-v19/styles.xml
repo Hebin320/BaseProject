@@ -1,0 +1,43 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+        <!--设置Activity没有标题栏-->
+        <item name="windowNoTitle">true</item>
+        <!--窗口的背景颜色-->
+        <item name="android:windowBackground">@color/activityBackGround</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <!--启动页Activity主页-->
+    <style name="SplashTheme" parent="@style/AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+    <!--透明状态栏主题-->
+    <style name="TranslucentStatus" parent="@style/AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="windowActionBar">true</item>
+    </style>
+    <!-- Activity切换动画样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+    </style>
+
+</resources>
