@@ -38,6 +38,11 @@
 
 * RippleView —— 实现点击波纹效果的Relatelayout
 
+<<<<<<< Updated upstream
+=======
+* SlidingLayout —— 侧滑关闭Activity
+
+>>>>>>> Stashed changes
 * MyTablayout —— 重写TabLayout，可设置图片（在文字的上下左右各个方向），可设置字体颜色（选中与未选中）、背景颜色、字体大小
 
 * DisableScrollViewpager —— 不可左右滑动的Viewpager
@@ -59,8 +64,13 @@
 
 * ViewpagerTool —— Viewpager的工具类，切换Viewpager，切换RadioButton
 
+<<<<<<< Updated upstream
 ## minterface接口类 
   
+=======
+## minterface接口类
+
+>>>>>>> Stashed changes
 *  base包内的接口为实现MVP的基础回调接口
 
 ## model 功能说明（业务逻辑处理工具类）

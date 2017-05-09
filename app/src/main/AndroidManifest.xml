@@ -53,6 +53,7 @@
             android:name=".ui.activity.universal.WebViewActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/AppTheme.Slide"
             >
         </activity>
     </application>

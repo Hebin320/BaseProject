@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.hebin.custom.view.relativelayout.SlidingLayout;
 import com.hebin.utils.SystemBarTintManager;
 import com.hebin.utils.ActivityManager;
 
@@ -38,6 +39,10 @@ public class BaseActivity extends AppCompatActivity {
      * 状态栏是否透明的标识
      */
     public boolean isTranslucent = false;
+    /**
+     * 状态栏是否侧滑关闭Activity
+     */
+    public boolean isSlideClose = false;
 
     private Context context;
 
@@ -49,6 +54,7 @@ public class BaseActivity extends AppCompatActivity {
         //每个Activity创建的时候，都自动加到Activity管理器中，便于对Activity的集体管理
         ActivityManager.addActivity(this);
     }
+
 
     /**
      * 设置状态栏为透明状态栏
@@ -97,6 +103,10 @@ public class BaseActivity extends AppCompatActivity {
         super.onStart();
         if (isTranslucent) {
             setTranslucent();
+        }
+        if (isSlideClose) {
+            SlidingLayout rootView = new SlidingLayout(this);
+            rootView.bindActivity(this);
         }
     }
 

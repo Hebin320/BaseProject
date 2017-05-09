@@ -40,6 +40,7 @@ public class WebViewActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         ButterKnife.inject(this);
+        isSlideClose = true;
         init();
         webview.loadUrl("http://www.baidu.com");
     }

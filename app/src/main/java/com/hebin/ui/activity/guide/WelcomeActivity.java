@@ -1,6 +1,7 @@
 package com.hebin.ui.activity.guide;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -12,6 +13,7 @@ import com.hebin.base.BaseActivity;
 import com.hebin.custom.view.tablayout.MyTabLayout;
 import com.hebin.encapsulation.permission.PermissionEnum;
 import com.hebin.encapsulation.permission.PermissionTool;
+import com.hebin.ui.activity.universal.WebViewActivity;
 import com.hebin.ui.adapter.universal.ViewpagerImgeViewAdapter;
 
 import butterknife.ButterKnife;
@@ -67,5 +69,6 @@ public class WelcomeActivity extends BaseActivity {
 
     @OnClick(R.id.ll_father)
     public void onClick() {
+        startActivity(new Intent(this, WebViewActivity.class));
     }
 }
