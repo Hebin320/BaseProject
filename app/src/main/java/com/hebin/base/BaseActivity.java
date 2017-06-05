@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
-
-import com.hebin.custom.view.relativelayout.SlidingLayout;
 import com.hebin.utils.SystemBarTintManager;
 import com.hebin.utils.ActivityManager;
 
@@ -32,19 +30,10 @@ public class BaseActivity extends AppCompatActivity {
      */
     public boolean isNeedToken = false;
     /**
-     * 用于网络请求，第二次请求的时候，不显示加载的Dialog的标识
-     */
-    public boolean isShowLoading = true;
-    /**
      * 状态栏是否透明的标识
      */
     public boolean isTranslucent = false;
-    /**
-     * 状态栏是否侧滑关闭Activity
-     */
-    public boolean isSlideClose = false;
-
-    private Context context;
+    public Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +42,7 @@ public class BaseActivity extends AppCompatActivity {
         getResources();
         //每个Activity创建的时候，都自动加到Activity管理器中，便于对Activity的集体管理
         ActivityManager.addActivity(this);
+        this.context = BaseActivity.this;
     }
 
 
@@ -103,10 +93,6 @@ public class BaseActivity extends AppCompatActivity {
         super.onStart();
         if (isTranslucent) {
             setTranslucent();
-        }
-        if (isSlideClose) {
-            SlidingLayout rootView = new SlidingLayout(this);
-            rootView.bindActivity(this);
         }
     }
 

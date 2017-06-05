@@ -37,8 +37,6 @@ public class CropPicTool extends SingletonUtil<CropPicTool> {
 
     public static void setCropPic(TakePhotoActivity activity, String selectPosition, int pickSize) {
 
-        PermissionTool.getInstance().CAMERA(activity).READ_EXTERNAL_STORAGE(activity);
-
         File file = new File(Environment.getExternalStorageDirectory(), "/temp/" + System.currentTimeMillis() + ".jpg");
         if (!file.getParentFile().exists()) file.getParentFile().mkdirs();
         // 图片保存路径
@@ -67,8 +65,6 @@ public class CropPicTool extends SingletonUtil<CropPicTool> {
     }
 
     public static void setCropPicForFragment(TakePhotoFragment activity, String selectPosition, int pickSize) {
-
-        PermissionTool.getInstance().READ_EXTERNAL_STORAGE(activity.getActivity()).CAMERA(activity.getActivity());
 
         File file = new File(Environment.getExternalStorageDirectory(), "/temp/" + System.currentTimeMillis() + ".jpg");
         if (!file.getParentFile().exists()) file.getParentFile().mkdirs();

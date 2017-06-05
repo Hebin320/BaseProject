@@ -1,4 +1,5 @@
 package com.hebin.minterface.base;
+
 /**
  * Author Hebin
  * <p>
@@ -14,11 +15,15 @@ public interface IBaseView<T> {
 
     T getData();
 
-    void getSuccess(int type, T T);
+    void getSuccess(String type, T T);
 
-    void getFailed(int type, T T);
+    void getFailed(String type, T T);
 
     void showLoading();
 
     void hideLoading();
+
+    void noNetConnected();
+
+    void netWork();
 }

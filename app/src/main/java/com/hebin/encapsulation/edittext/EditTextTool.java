@@ -16,6 +16,9 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.hebin.minterface.universal.DoSomeThing;
+
 /**
  * Author Hebin
  * <p>
@@ -50,15 +53,13 @@ public class EditTextTool {
      * @param editText 文本框
      */
     public EditTextTool showOrHideEye(CheckBox[] checkBox, EditText[] editText) {
-        if (checkBox.length == editText.length) {
-            for (int i = 0; i < editText.length; i++) {
-                if (checkBox[i].isChecked()) {
-                    editText[i].setTransformationMethod(PasswordTransformationMethod.getInstance());
-                    checkBox[i].setChecked(false);
-                } else {
-                    editText[i].setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                    checkBox[i].setChecked(true);
-                }
+        for (int i = 0; i < editText.length; i++) {
+            if (checkBox[i].isChecked()) {
+                editText[i].setTransformationMethod(PasswordTransformationMethod.getInstance());
+                checkBox[i].setChecked(false);
+            } else {
+                editText[i].setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                checkBox[i].setChecked(true);
             }
         }
         return this;
@@ -79,17 +80,15 @@ public class EditTextTool {
      * 改变EditText底部线条的颜色
      */
     public EditTextTool setLineChangeByLostFocus(EditText[] editTexts, View[] views) {
-        if (editTexts.length == views.length) {
-            for (int i = 0; i < editTexts.length; i++) {
-                int position = i;
-                editTexts[i].setOnFocusChangeListener((view, b) -> {
-                    if (b) {
-                        views[position].setBackgroundColor(Color.parseColor("#29c98f"));
-                    } else {
-                        views[position].setBackgroundColor(Color.parseColor("#e7e7e7"));
-                    }
-                });
-            }
+        for (int i = 0; i < editTexts.length; i++) {
+            int position = i;
+            editTexts[i].setOnFocusChangeListener((view, b) -> {
+                if (b) {
+                    views[position].setBackgroundColor(Color.parseColor("#29c98f"));
+                } else {
+                    views[position].setBackgroundColor(Color.parseColor("#e7e7e7"));
+                }
+            });
         }
         return this;
     }
@@ -135,6 +134,31 @@ public class EditTextTool {
                 });
             }
         }
+        return this;
+    }
+
+    /**
+     * 监听文本框内容，自定义操作
+     */
+    public final static String ET_CHANGE_DOSOMETHING_TAG = "文本框输入变化触发的接口";
+
+    public EditTextTool etChangeDoSomeThing(EditText editTexts, DoSomeThing doSomeThing) {
+        editTexts.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                doSomeThing.doSomeThing(ET_CHANGE_DOSOMETHING_TAG, editable.toString());
+            }
+        });
         return this;
     }
 
@@ -187,6 +211,25 @@ public class EditTextTool {
             if (phone.length() == 11) {
                 textView.setText(phone.substring(0, 3) + "****" + phone.substring(7, 11));
             }
+        }
+        return this;
+    }
+
+    /**
+     * 多个CheckBox的时候，点击一个，设置其他为非选中状态
+     */
+    public EditTextTool cbCheckedChange(CheckBox[] checkBoxes) {
+        for (int i = 0; i < checkBoxes.length; i++) {
+            int finalI = i;
+            checkBoxes[i].setOnCheckedChangeListener((compoundButton, b) -> {
+                if (b) {
+                    for (int k = 0; k < checkBoxes.length; k++) {
+                        if (k != finalI) {
+                            checkBoxes[k].setChecked(false);
+                        }
+                    }
+                }
+            });
         }
         return this;
     }

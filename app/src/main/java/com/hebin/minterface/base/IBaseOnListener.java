@@ -20,4 +20,8 @@ public interface IBaseOnListener<T> {
     void showLoading();
 
     void hideLoading();
+
+    void noNetConnected();
+
+    void netWork();
 }

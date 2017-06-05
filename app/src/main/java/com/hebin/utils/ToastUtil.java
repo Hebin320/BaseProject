@@ -9,10 +9,11 @@ import android.widget.Toast;
 
 import com.hebin.R;
 
+
 /**
  * Author Hebin
  * <p>
- * created at 2017/5/5 10:28
+ * created at 2017/5/12 15:39
  * <p>
  * blog: http://blog.csdn.net/hebin320320
  * <p>
@@ -21,7 +22,6 @@ import com.hebin.R;
  * 说明：
  */
 public class ToastUtil extends SingletonUtil<ToastUtil> {
-
     /**
      * 之前显示的内容
      */
@@ -96,5 +96,4 @@ public class ToastUtil extends SingletonUtil<ToastUtil> {
     public static void printData(String string) {
         System.out.println("Hebin" + string);
     }
-
 }

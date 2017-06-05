@@ -3,7 +3,7 @@ package com.hebin.model.universal;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.request.BaseRequest;
-import com.hebin.minterface.SuccessListener;
+import com.hebin.minterface.universal.SuccessListener;
 import com.hebin.minterface.base.IBaseOnListener;
 import com.hebin.utils.SingletonUtil;
 

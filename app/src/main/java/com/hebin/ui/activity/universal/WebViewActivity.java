@@ -5,11 +5,11 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import com.hebin.R;
+import com.hebin.widget.webview.X5WebView;
 import com.tencent.smtt.sdk.ValueCallback;
 import com.tencent.smtt.sdk.WebChromeClient;
 import com.tencent.smtt.sdk.WebView;
 import com.hebin.base.BaseActivity;
-import com.hebin.custom.webview.X5WebView;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
@@ -40,7 +40,6 @@ public class WebViewActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         ButterKnife.inject(this);
-        isSlideClose = true;
         init();
         webview.loadUrl("http://www.baidu.com");
     }

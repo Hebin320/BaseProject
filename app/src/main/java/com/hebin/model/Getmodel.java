@@ -2,10 +2,11 @@ package com.hebin.model;
 
 import android.content.Context;
 
-import com.hebin.minterface.SuccessListener;
+import com.hebin.minterface.universal.SuccessListener;
 import com.hebin.minterface.base.IBaseBiz;
 import com.hebin.minterface.base.IBaseOnListener;
 import com.hebin.model.universal.OkgoGetModel;
+
 /**
  * Author Hebin
  * <p>
@@ -20,7 +21,7 @@ import com.hebin.model.universal.OkgoGetModel;
 public class Getmodel implements IBaseBiz, SuccessListener {
     @Override
     public void getData(Context context, Object T, IBaseOnListener onListener) {
-        OkgoGetModel.getData("http://www.baidu.com", "Hebin", onListener,this);
+        OkgoGetModel.getData("http://www.baidu.com", onListener, this);
     }
 
     @Override

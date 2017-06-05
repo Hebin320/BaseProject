@@ -49,13 +49,13 @@ containing a value of this type.
         public static int showThirds=0x7f010002;
     }
     public static final class color {
-        public static int crop__button_bar=0x7f060001;
-        public static int crop__button_text=0x7f060002;
-        public static int crop__selector_focused=0x7f060003;
-        public static int crop__selector_pressed=0x7f060000;
+        public static int crop__button_bar=0x7f050001;
+        public static int crop__button_text=0x7f050002;
+        public static int crop__selector_focused=0x7f050003;
+        public static int crop__selector_pressed=0x7f050000;
     }
     public static final class dimen {
-        public static int crop__bar_height=0x7f050000;
+        public static int crop__bar_height=0x7f040000;
     }
     public static final class drawable {
         public static int crop__divider=0x7f020000;
@@ -79,11 +79,11 @@ containing a value of this type.
         public static int crop__layout_done_cancel=0x7f030001;
     }
     public static final class string {
-        public static int crop__cancel=0x7f040000;
-        public static int crop__done=0x7f040001;
-        public static int crop__pick_error=0x7f040002;
-        public static int crop__saving=0x7f040003;
-        public static int crop__wait=0x7f040004;
+        public static int crop__cancel=0x7f060000;
+        public static int crop__done=0x7f060001;
+        public static int crop__pick_error=0x7f060002;
+        public static int crop__saving=0x7f060003;
+        public static int crop__wait=0x7f060004;
     }
     public static final class style {
         public static int Crop=0x7f070000;

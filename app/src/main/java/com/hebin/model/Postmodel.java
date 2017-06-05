@@ -3,7 +3,7 @@ package com.hebin.model;
 import android.content.Context;
 
 import com.hebin.entity.DataEntity;
-import com.hebin.minterface.SuccessListener;
+import com.hebin.minterface.universal.SuccessListener;
 import com.hebin.minterface.base.IBaseBiz;
 import com.hebin.minterface.base.IBaseOnListener;
 import com.hebin.model.universal.OkgoPostModel;

@@ -7,23 +7,24 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
+    android:background="@drawable/btn_bg_10dp_toast"
     >
 
 
     <com.hebin.superrecyclerview.recycleview.progressindicator.AVLoadingIndicatorView
-        android:layout_width="@dimen/dp_50"
-        android:layout_height="@dimen/dp_50"
+        android:id="@+id/av_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:indicator="BallSpinFadeLoader"
-        app:indicator_color="@color/colorPrimary"
+        app:indicator_color="@color/white"
         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_5"
-        android:layout_marginTop="@dimen/dp_8"
-        android:text="玩命加载中..."
-        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="@dimen/dp_12"
+        android:text="加载中..."
+        android:textColor="@color/white"
         android:textSize="@dimen/sp_16"/>
 
     <!--app:loadingText="加载中..."-->
